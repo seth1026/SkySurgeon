@@ -11,7 +11,7 @@ The project focuses on two main predictive tasks:
 
 ---
 
-# Dataset
+## Dataset
 
 The dataset used in this project is the **NASA Turbofan Engine Degradation Simulation Dataset (CMAPSS)**.
 
@@ -37,7 +37,7 @@ https://www.kaggle.com/datasets/behrad3d/nasa-cmaps
 
 ---
 
-# Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 Exploratory Data Analysis was performed to understand sensor behavior and degradation patterns.
 
@@ -52,54 +52,54 @@ Key analysis steps include:
 
 ---
 
-# Predictive Maintenance Models
+## Predictive Maintenance Models
 
 Multiple traditional and deep learning models were implemented and compared.
 
-## Regression Models (RUL Prediction)
+### Regression Models (RUL Prediction)
 
 These models estimate the **Remaining Useful Life (RUL)** of an engine.
 
-### 1. Exponential Degradation Model
+#### 1. Exponential Degradation Model
 Models engine degradation using an exponential decay function to estimate remaining life.
 
-### 2. Similarity-Based Model
+#### 2. Similarity-Based Model
 Predicts RUL by comparing current engine degradation trajectories with historical engine data.
 
-### 3. LSTM Model
+#### 3. LSTM Model
 A deep learning sequence model capable of capturing **long-term temporal dependencies** in sensor time-series data.
 
 ---
 
-## Classification Models (Failure Prediction)
+### Classification Models (Failure Prediction)
 
 These models predict whether an engine will fail within a defined time horizon.
 
-### 4. LSTM (Binary & Multiclass Classification)
+#### 4. LSTM (Binary & Multiclass Classification)
 Detects early failure patterns using temporal dependencies in sensor data.
 
-### 5. RNN (Binary & Multiclass Classification)
+#### 5. RNN (Binary & Multiclass Classification)
 Uses recurrent neural networks to model sequential sensor behavior.
 
-### 6. 1D CNN
+#### 6. 1D CNN
 Extracts temporal features from time-series sensor data using convolutional filters.
 
-### 7. CNN-SVM Hybrid Model
+#### 7. CNN-SVM Hybrid Model
 Combines **CNN feature extraction** with **SVM classification** for binary failure prediction.
 
 ---
 
-# Experimentation and Evaluation
+## Experimentation and Evaluation
 
 Models were evaluated using appropriate metrics for regression and classification tasks.
 
-## Regression Metrics
+### Regression Metrics
 
 - RMSE (Root Mean Square Error)
 - MAE (Mean Absolute Error)
 - NASA RUL scoring function
 
-## Classification Metrics
+### Classification Metrics
 
 - Accuracy
 - Precision
@@ -116,7 +116,7 @@ Additional experimentation included:
 
 ---
 
-# Future Work
+## Future Work
 
 Potential improvements and extensions include:
 
@@ -130,7 +130,7 @@ Potential improvements and extensions include:
 
 ---
 
-# Tech Stack
+## Tech Stack
 
 - Python
 - TensorFlow / Keras
@@ -140,33 +140,6 @@ Potential improvements and extensions include:
 - NumPy
 - Matplotlib
 - Seaborn
-
----
-
-# Project Structure
-
-```
-Predictive-Maintenance/
-│
-├── data/
-│   ├── train/
-│   └── test/
-│
-├── notebooks/
-│   ├── EDA.ipynb
-│   ├── RUL_models.ipynb
-│   └── classification_models.ipynb
-│
-├── models/
-│   ├── lstm.py
-│   ├── cnn.py
-│   └── svm.py
-│
-├── utils/
-│   └── preprocessing.py
-│
-└── README.md
-```
 
 ---
 
